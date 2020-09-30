@@ -1,0 +1,93 @@
+RFC 001 'CHAT'
+
+General format of a packet
+
+  --------------------------------
+  |  OPCODE  |  LENGTH  |  DATA  |
+  --------------------------------
+    01 bytes   02 bytes   n bytes
+  
+  
+0. General confirmation / Error messages (Server to Client )
+  
+  0.1 'OK' -> Procedure completed correctly
+
+    -------------
+    |  0  |  0  |
+    -------------
+
+  0.2 'Error' -> An error was encountered during the completion of procedure
+
+    ------------------------------------------
+    |  0  |  *  |  ERROR_DESCRIPTION_STRING  |
+    ------------------------------------------
+
+
+1. Initial Connection Protocol
+
+  1.1 Client to server registration
+
+    --------------------------------
+    |  11  |  LENGTH  |  USERNAME  |
+    --------------------------------
+
+  1.2 Client to server response:
+
+    'OK' -> Procedure completed correctly, username was added to user list.
+            Packet format as described in '0.1'
+
+    'Error' -> User hasn't been added because of error.
+            Possible errors are: username is already present, username is invalid.
+            Packet format as described in '0.2'
+  
+2. Logout 
+  
+  2.1 Client to server disconnection
+      
+    Client sends disconnection request to the server.
+    --------------
+    |  12 |  00  |
+    --------------
+      
+  2.2 Disconnection Acknowledgment
+      
+      The server, after deleting the client's username from the user-list responds with 'OK'. Format as described in 0.1.
+      
+    
+3. Information
+  
+  3.1 Client server information request, to test status.
+  
+    --------------
+    |  40 |  00  |
+    --------------
+      
+   
+  3.3 Client list request 
+  
+   ---------------
+   |  40  |  00  |
+   ---------------
+ 
+  3.4 Server list 
+    
+    
+
+4. Public message
+
+ --------------------------------
+    |  11  |  LENGTH  |  USERNAME  |
+    --------------------------------
+
+
+5. Private message 
+      
+      
+      
+      
+      
+      
+      
+
+  
+  
