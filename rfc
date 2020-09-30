@@ -1,13 +1,13 @@
-# RFC 001 'CHAT'
+RFC 001 'CHAT'
 
-## General format of a packet
+General format of a packet
 
 --------------------------------
 |  OPCODE  |  LENGTH  |  DATA  |
 --------------------------------
   01 bytes   02 bytes   n bytes
 
-## 01. Initial Connection Protocol
+01. Initial Connection Protocol
 
 Client to server registration:
 
