@@ -1,6 +1,7 @@
-#RFC 001 'CHAT'
+# RFC 001 'CHAT'
 
-##General format of a packet
+## General format of a packet
+
 
 ------------
 |  OPCODE  |
@@ -8,6 +9,7 @@
 
 
 ##Initial Connection Protocol
+
 -----------
 |         |
 -----------
