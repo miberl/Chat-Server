@@ -1,0 +1,17 @@
+# RFC 001 'CHAT'
+
+## General format of a packet
+
+--------------------------------
+|  OPCODE  |  LENGTH  |  DATA  |
+--------------------------------
+  01 bytes   02 bytes   n bytes
+
+## 01. Initial Connection Protocol
+
+Client to server registration:
+
+--------------------------------
+|  11  |  LENGTH  |  USERNAME  |
+--------------------------------
+
