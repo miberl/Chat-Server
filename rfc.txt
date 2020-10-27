@@ -1,4 +1,4 @@
-RFC 'CHAT'
+RFC 'CHAT UDP'
 
 General format of a packet
 
@@ -111,7 +111,7 @@ General format of a packet
       |  23  |  *  |  SENDER  |  0  |  MESSAGE  | 
       -------------------------------------------
 
- Server to sender response:
+  Server to sender response:
 
     'OK' -> Procedure completed correctly, destination user is present in list.
             Packet format as described in '0.1'
