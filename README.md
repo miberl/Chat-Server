@@ -10,7 +10,7 @@ General format of a packet:
      01 bytes   02 bytes   n bytes
   
   
-## 0. General confirmation / Error messages (Server to Client )
+### 0. General confirmation / Error messages (Server to Client )
   
   0.1 'OK' -> Procedure completed correctly
 
@@ -25,7 +25,7 @@ General format of a packet:
       ------------------------------------------
 
 
-## 1. Initial Connection Protocol
+### 1. Initial Connection Protocol
 
   1.1 Client to server registration
 
@@ -42,7 +42,7 @@ General format of a packet:
             Possible errors are: username is already present, username is invalid.
             Packet format as described in '0.2'
   
-## 2. Logout 
+### 2. Logout 
   
   2.1 Client to server disconnection
       
@@ -56,7 +56,7 @@ General format of a packet:
       The server, after deleting the client's username from the user-list responds with 'OK'. Format as described in 0.1.
       
     
-## 3. Information
+### 3. Information
   
   3.1 Client server information request, to test status.
   
@@ -84,7 +84,7 @@ General format of a packet:
       ----------------------------------------------------------------
        
 
-## 4. Public message
+### 4. Public message
 
   4.1 Client sends 'broadcast' message to all users.
   
@@ -99,7 +99,7 @@ General format of a packet:
       -------------------------------------------
  
 
-## 5. Private message 
+### 5. Private message 
       
   5.1 Client sends message to server, addressed to specific user.
 
