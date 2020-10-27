@@ -2,6 +2,10 @@ package com.company;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
+/*
+    Classe che rappresenta un utente, identificato dal suo username (univoco nella lista degli utenti attivi) e dal
+    socket (coppia IP-porta).
+*/
 
 public class User {
 

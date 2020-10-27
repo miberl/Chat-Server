@@ -5,6 +5,9 @@ import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+/*
+    Lista di user con implementazione di metodi utili alla loro gestione.
+*/
 public class UserCollection {
     LinkedList<User> users;
 
@@ -35,7 +38,7 @@ public class UserCollection {
         return false;
     }
 
-    //Verifica che uno username non è già presente
+    //Verifica che uno username non sia già presente nella lista
     public boolean unique(String username) {
         for (User u : users) {
             if (u.getUsername().equals(username))
