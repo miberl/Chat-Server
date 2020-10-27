@@ -1,8 +1,8 @@
 # Chat-Server
 
-RFC 'CHAT UDP'
+## RFC 'CHAT UDP'
 
-General format of a packet:
+### General format of a packet:
 
     --------------------------------
     |  OPCODE  |  LENGTH  |  DATA  |
