@@ -2,12 +2,12 @@
 
 RFC 'CHAT UDP'
 
-- General format of a packet
+General format of a packet:
 
-  --------------------------------
-  |  OPCODE  |  LENGTH  |  DATA  |
-  --------------------------------
-    01 bytes   02 bytes   n bytes
+    --------------------------------
+    |  OPCODE  |  LENGTH  |  DATA  |
+    --------------------------------
+     01 bytes   02 bytes   n bytes
   
   
 0. General confirmation / Error messages (Server to Client )
