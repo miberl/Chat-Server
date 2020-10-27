@@ -2,7 +2,7 @@
 
 RFC 'CHAT UDP'
 
-General format of a packet
+- General format of a packet
 
   --------------------------------
   |  OPCODE  |  LENGTH  |  DATA  |
