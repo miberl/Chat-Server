@@ -19,7 +19,7 @@ General format of a packet
   0.2 'Error' -> An error was encountered during the completion of procedure
 
       ------------------------------------------
-      |  0  |  *  |  ERROR_DESCRIPTION_STRING  |
+      |  01  |  *  |  ERROR_DESCRIPTION_STRING  |
       ------------------------------------------
 
 
@@ -31,7 +31,7 @@ General format of a packet
       |  11  |  LENGTH  |  USERNAME  |
       --------------------------------
 
-  1.2 Client to server response:
+  1.2 Server to client response:
 
     'OK' -> Procedure completed correctly, username was added to user list.
             Packet format as described in '0.1'
@@ -101,27 +101,21 @@ General format of a packet
       
   5.1 Client sends message to server, addressed to specific user.
 
-      -------------------------------------------
+      --------------------------------------------
       |  22  |  *  |  RECEIVER  |  0  |  MESSAGE |
-      -------------------------------------------
+      --------------------------------------------
       
   5.2 Server forwards message to specified user.
       
       -------------------------------------------
       |  23  |  *  |  SENDER  |  0  |  MESSAGE  | 
       -------------------------------------------
-     
-          
-          
-          
-      
-      NELLA LISTA UTENTE INDIRIZZO PORTA
-      classe che rappresenta l'utente
-      classe messaggio in cui viene composto il messaggio
-      
-      
-  
-      
 
-  
-  
+ Server to sender response:
+
+    'OK' -> Procedure completed correctly, destination user is present in list.
+            Packet format as described in '0.1'
+
+    'Error' -> Procedure not completed, destination user wasn't found in list.
+            Possible errors are: username is already present, username is invalid.
+            Packet format as described in '0.2'
