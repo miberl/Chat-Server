@@ -1,5 +1,22 @@
 # Chat-Server
 
+## The Server
+
+### General Information
+
+By default the server listens on port 2000, it can be tested by sending a request packet to: 3.130.135.149.
+
+### Usage 
+
+As per protocol described in:
+> RFC 'CHAT UDP'
+
+In order to use the server a user must be logged on with a unique id/username.
+
+### Implementation
+
+This was implemented using a multithreaded architecture: when a packet is received the main execute thread creates a separate thread to handle it.
+
 ## RFC 'CHAT UDP'
 
 ### General format of a packet:
